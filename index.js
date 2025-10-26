@@ -1,10 +1,10 @@
 
 import express from 'express';
-
+import { ENV_VARS } from './config/envVars.js';
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = ENV_VARS.PORT;
 
 app.listen(PORT, () =>{
     console.log(`Server is running on port ${PORT}`);
